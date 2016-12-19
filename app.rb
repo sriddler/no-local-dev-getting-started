@@ -7,8 +7,8 @@ class Programs < ActiveRecord::Base
   self.table_name = 'salesforce.exed_programs__c'
 end
 
-get "/contacts" do
-  @contacts = Contact.all
+get "/progarms" do
+  @contacts = Programs.all
   erb :index
 end
 
