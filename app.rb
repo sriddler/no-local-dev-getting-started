@@ -3,15 +3,14 @@
 require 'sinatra'
 require 'sinatra/activerecord'
 require './environments'
-class Programs < ActiveRecord::Base
-  self.table_name = 'salesforce.exed_programs__c'
+class Contact < ActiveRecord::Base
+  self.table_name = 'salesforce.contact'
 end
 
-get "/programs" do
-  @contacts = Programs.all
+get "/contacts" do
+  @contacts = Contact.all
   erb :index
 end
-
 get "/" do
   erb :home
 end
